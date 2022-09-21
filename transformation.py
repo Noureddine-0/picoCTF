@@ -3,12 +3,12 @@
 # the purpose of the following script is to reverse engineering what was written above. 
 
 a=input('Enter your phrase:')
-s=''
+flag=''
 for i in a:
 	l=ord(i)  
 	b=l//256   
-	s=s+str(chr(b))
+	flag=flag+str(chr(b))
 	c=l-b*256
-	s=s+str(chr(c))
+	flag=flag+str(chr(c))
 
-print(s)
+print(flag)
