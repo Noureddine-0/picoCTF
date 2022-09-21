@@ -2,7 +2,7 @@
 
 # the purpose of the following script is to reverse engineering what was written above. 
 
-a=input('Enter your phrase:')
+a=input('Enter the enc content:')
 flag=''
 for i in a:
 	l=ord(i)  
