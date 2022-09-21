@@ -1,3 +1,5 @@
+### Solution for Transformation ###
+
 a=input('Enter your phrase:')
 s=''
 for i in a:
