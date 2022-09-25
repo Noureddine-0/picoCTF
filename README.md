@@ -1,4 +1,4 @@
-this repository will include some suggestions of solutions to some picoCTF challenge.
+this repository will include some suggestions of solutions to some picoCTF challenges.
 I encourage you to read it carefully , so that you can build your own in the next challenges.
 
 
