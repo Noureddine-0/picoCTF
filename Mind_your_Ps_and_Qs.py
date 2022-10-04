@@ -1,6 +1,6 @@
 from Crypto.Util.number import * 
 
-## the gcdExtended function is copied from GeeksforGeeeks and u must at least know that it exist.
+## the gcdExtended function is copied from GeeksforGeeeks and u must at least know that it exists.
 
 def gcdExtended(a, b):
 
