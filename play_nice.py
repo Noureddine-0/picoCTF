@@ -1,4 +1,4 @@
-alphabet:'0uxtb3w4kj26q9m8gioe7nvahplr5dy1fzcs'
+alphabet:input("enter the encrypted text")
 SQUARE_SIZE = 6
 def generate_square(alphabet):
 	assert len(alphabet) == pow(SQUARE_SIZE, 2)   
@@ -10,7 +10,13 @@ def generate_square(alphabet):
 		if i % SQUARE_SIZE == (SQUARE_SIZE - 1):
 			matrix.append(row)
 	return matrix
-
+def get_index(letter, matrix):
+	for row in range(SQUARE_SIZE):
+		for col in range(SQUARE_SIZE):
+			if matrix[row][col] == letter:
+				return (row, col)
+	print("letter not found in matrix.")
+	exit()
 def decrypt_pair(pair,matrix):
 	p1 = get_index(pair[0],matrix)
 	p2 = get_index(pair[1],matrix)
