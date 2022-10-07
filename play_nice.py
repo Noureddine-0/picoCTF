@@ -1,22 +1,26 @@
-alphabet = input("enter the encrypted text")
+alphabet = '0uxtb3w4kj26q9m8gioe7nvahplr5dy1fzcs'
+enc = input("Enter the encrypted text:")
+
 SQUARE_SIZE = 6
 def generate_square(alphabet):
 	assert len(alphabet) == pow(SQUARE_SIZE, 2)   
 	matrix = []             
-    for i, letter in enumerate(alphabet):  
+	for i, letter in enumerate(alphabet): 
 		if i % SQUARE_SIZE == 0:  
 			row = []
 		row.append(letter)
 		if i % SQUARE_SIZE == (SQUARE_SIZE - 1):
 			matrix.append(row)
 	return matrix
+
+
 def get_index(letter, matrix):
 	for row in range(SQUARE_SIZE):
 		for col in range(SQUARE_SIZE):
 			if matrix[row][col] == letter:
 				return (row, col)
 	print("letter not found in matrix.")
-	exit()
+	exit() 
 def decrypt_pair(pair,matrix):
 	p1 = get_index(pair[0],matrix)
 	p2 = get_index(pair[1],matrix)
@@ -33,6 +37,6 @@ def decrypt_message(message,matrix):
 		result += decrypt_pair(message[i:i + 2], matrix)
 	return result
 
-print(decrypt_message('xj5c181ropf5xjmyujnv0wlqrjdrbz',generate_square(alphabet)))
+print(decrypt_message(enc,generate_square(alphabet)))
 
 #the flag is not in standard format , so just paste the output without picoCTF
