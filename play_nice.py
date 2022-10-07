@@ -1,4 +1,4 @@
-alphabet:input("enter the encrypted text")
+alphabet = input("enter the encrypted text")
 SQUARE_SIZE = 6
 def generate_square(alphabet):
 	assert len(alphabet) == pow(SQUARE_SIZE, 2)   
