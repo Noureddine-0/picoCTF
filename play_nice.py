@@ -3,7 +3,7 @@ SQUARE_SIZE = 6
 def generate_square(alphabet):
 	assert len(alphabet) == pow(SQUARE_SIZE, 2)   
 	matrix = []             
-  for i, letter in enumerate(alphabet):  
+    for i, letter in enumerate(alphabet):  
 		if i % SQUARE_SIZE == 0:  
 			row = []
 		row.append(letter)
